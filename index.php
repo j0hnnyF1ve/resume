@@ -1,5 +1,4 @@
 <?php
-//$styles = array('Basic', 'Tabs', 'Accordion', 'Windows');
 $styles = array('Basic', 'Tabs', 'Accordion');
 ?>
 
@@ -9,10 +8,10 @@ $styles = array('Basic', 'Tabs', 'Accordion');
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
     <title>Welcome to johnpangilinan.com</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/smoothness/jquery-ui-1.8.1.css"></script>
+    <link rel="stylesheet" href="styles/smoothness/jquery-ui-1.8.1.css"></link>
     <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui-1.8.1.js"></script>
-    
+
     <style type="text/css">
         a { outline: none; }
         #SwitchStyles
@@ -21,14 +20,15 @@ $styles = array('Basic', 'Tabs', 'Accordion');
             right: 0px; top: 0px;
             z-index: 10;
             border: solid 1px black;
+            background-color: white;
         }
-        
+
         #SwitchStyles h2
         {
             font-size: 12pt;
             margin: 10px;
         }
-        
+
         #SwitchStyles ul { list-style-type: none; padding: 0px; margin-left: 15px; }
         #SwitchStyles li { text-align: left; }
     </style>
@@ -77,7 +77,7 @@ $styles = array('Basic', 'Tabs', 'Accordion');
                         $jq("#ContactIdButton").click(function() { switchForm("Contact1"); } )
                     }
                 }
-                
+
             });
         }
 
@@ -86,7 +86,7 @@ $styles = array('Basic', 'Tabs', 'Accordion');
             contactForm = $jq("#ContactForm").dialog( {width: 450, height: 370, autoOpen: false, show: 'slide', hide: 'slide', close: function() { switchForm("Contact1"); }  } );
             $jq("#Accordion").accordion({ header: "h2" }).css({"height": "600px" }).children("div").css({"height":"320px"});
             $jq('#Tabs').tabs();
-            $jq("#Basic").siblings("div").hide();
+            $jq("#Tabs").siblings("div").hide();
 
         });
     </script>
@@ -131,7 +131,7 @@ $style = str_replace(' ', '', $styleName);
         </div>
         <div>
             <input type="button" value="Send Email" onclick="sendMessage()" />
-        </div>    
+        </div>
     </div>
     <div id="Contact2">
         <div id="ContactResponseMessage">
@@ -145,7 +145,8 @@ $style = str_replace(' ', '', $styleName);
 <div id="Container">
     <div id="Heading" class="heading">
         <h1>John Pangilinan</h1>
-        <a href="#" onclick="showContactForm()">Contact Me</a>
+        <a href="/portfolio/">Portfolio</a>
+        <?php /* <a href="#" onclick="showContactForm()">Contact Me</a> */ ?>
     </div>
     <div>
 <?php
@@ -155,14 +156,18 @@ $style = str_replace(' ', '', $styleName);
 
 ?>
     </div>
-
+<?php
+/*
     <p id="W3Validation">
         <a href="http://validator.w3.org/check?uri=referer" target="new">
             <img src="http://www.w3.org/Icons/valid-xhtml10"
             alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
         </a>
     </p>
+*/
+  ?>
+
 </div>
-    
+
 </body>
 </html>
