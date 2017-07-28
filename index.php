@@ -145,7 +145,8 @@ $style = str_replace(' ', '', $styleName);
 <div id="Container">
     <div id="Heading" class="heading">
         <h1>John Pangilinan</h1>
-        <a href="/portfolio/">Portfolio</a>
+        <p>Glendale, CA USA</p>
+        <p>Also available for Remote work, please visit my <a href="/portfolio/">Portfolio</a></p>
         <?php /* <a href="#" onclick="showContactForm()">Contact Me</a> */ ?>
     </div>
     <div>
